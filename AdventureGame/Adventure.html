@@ -7,18 +7,18 @@
         <h1>Adventure Game v1.0</h1>
         <p>Made by: Noah Flick</p>
         <script>
-            start();
+            Start();
             
             function Start(){
                 
-                var playerName = prompt("What is your last name soldier?");
+                var playerName = prompt("What is your name soldier?");
                 
                 alert("welcome to Heriford Military base private " + playerName);
                 
                 var startGame = confirm("Are you ready to begin your training?");
                 
                     if(startGame){
-                        
+                       base(); 
                     }
                     else{
                         ("goodbye.");
@@ -27,15 +27,37 @@
             }
             
             function base(){
-                var base = prompt ("You arrive at the bunks. There are 11 others lying around, relaxing while they can.").toLowerCase();
+                var base = prompt ("There are four places you can visit. The bunks, the garage, the range, and the training grounds. Where would yo like to go?").toLowerCase();
+                
                 
                 switch(base){
-                        case "Williams"
-                            alert("Private Williams looks at you and mumbles to himself. You keep your pace and walk forward.");
-                        break;
-                        case "Green"
-                            alert("You hear someone call out 'Hey rookie!' A man in uniform approaches you. 'Name's Green.' you could easily tell he was from the south by how he talks.");
-                                alert("Nice to meet a friendly face. I'm " + playerName);
+                    case "range":
+                        alert("You walk into the shooting range. You see people are firing weapons at immobile targets from 100 meters away. unfortunatly you cannot join them since you havent finished your training yet.");
+                        
+                        base();
+                    break;
+                    case "the garage":
+                        alert("You walk into the garage and see someone underneath an armored humvee. He notices your feet and says 'Hey you! hand me that wrench in the red toolbox on the table!");
+                        alert("you grab the wench and hand it to the mechanic.");
+                        alert("'thanks!' he calls out");
+                        alert("there is nothing else to do in the garage.");
+                        
+                        base();
+                    break;
+                    case "garage":
+                        alert("You walk into the garage and see someone underneath an armored humvee. He notices your feet and says 'Hey you! hand me that wrench in the red toolbox on the table!");
+                        alert("you grab the wench and hand it to the mechanic.");
+                        alert("'thanks!' he calls out");
+                        alert("there is nothing else to do in the garage.");
+                        
+                        base();
+                    break;
+                        case "the range":
+                        alert("You walk into the shooting range. You see people are firing weapons at immobile targets from 100 meters away. unfortunatly you cannot join them since you havent finished your training yet.");
+                        
+                        base();
+                    break;
+                    
                            }
             }
 
