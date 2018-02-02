@@ -7,6 +7,17 @@
         <h1>Adventure Game v1.0</h1>
         <p>Made by: Noah Flick</p>
         <script>
+            // Javascript Object for an inventory
+            var inventory = {
+                dog_tag:1,
+                M4A1:0,
+                ammo:0,
+                flamingdragonskull:0,
+                coins:1000,
+                
+                
+                
+            }
             Start();
             
             function Start(){
@@ -27,10 +38,26 @@
             }
             
             function base(){
-                var base = prompt ("There are four places you can visit. The bunks, the garage, the range, and the training grounds. Where would yo like to go?").toLowerCase();
-                
+                var base = prompt ("There are four places you can visit. The bunks, the garage, the range, and the training grounds. Where would yo like to go? Type 'store' for store demonstration.").toLowerCase();
                 
                 switch(base){
+                    case "store":
+                        alert ("you walk into the store and see a flaming dragon skull and a sword.");
+                        var storetest = prompt ("what would you like to buy? \n - sword \n - flaming dragon skull");
+                            if(storetest == "flaming dragon skull" || storetest == "buy flaming dragon skull" && inventory.coins >= 300) {
+                                var dragonbuy = confirm ("do you want to buy flaming dragon skull?");
+                                    if(dragonbuy) {    
+                                        inventory.flamingdragonskull ++;
+                                        alert("you now own " +inventory.flamingdragonskull+" flaming dragon skulls");
+                                        inventory.coins = inventory.coins - 300;
+                                        alert ("you have "+inventory.coins+" coins remaining");
+                
+                                        base();
+                                        
+                                    }
+
+                            }
+                        
                     case "range":
                         alert("You walk into the shooting range. You see people are firing weapons at immobile targets from 100 meters away. unfortunatly you cannot join them since you havent finished your training yet.");
                         
@@ -57,6 +84,26 @@
                         
                         base();
                     break;
+                    case "the bunks":
+                        alert("You walk in the bunks. You glance around and see other recruits lieing on ther bunks relaxing and conversing.");
+                        prompt("you have two places to go. Your bunk or the other recruits. where do you want to go?");
+                        
+                    case "your bunk":
+                        alert("You walk to your bunk and lie down, waiting for whatever comes next.");
+                        alert(" 5 hours pass.");
+                        alert("GET UP YOU SKINNY CHILDREN ITS TIME TO GET TO WORK!");
+                        alert("you scramble out of your bunk and stand with your arms tightly at your sides.");
+                        alert("everyone lines up. ");
+                        alert("NOW LISTEN UP! YOU HAVE FIVE MINUTES TO GET DRESSED AND MAKE THOSE BUNKS! READY SET GO!");
+                        prompt ("Quickly! what do you do first?");
+                    case "get dressed":
+                        alert("you grab your uniform and put it on as fast as you can.");
+                        alert("after putting on your uniform you run to your bunk and start making it.");
+                        alert("three minutes pass and you line back up. it seems your the first one done.");
+                        alert("ARE YOU FINISHED WITH YOUR DUTYS?!");
+                        alert("'SIR YES SIR!'");
+                        
+                         
                     
                            }
             }
