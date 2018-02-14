@@ -59,10 +59,10 @@
                             }
                         
                     case "range":
-                        alert("You walk into the shooting range. You see people are firing weapons at immobile targets from 100 meters away. unfortunatly you cannot join them since you havent finished your training yet.");
-                        
-                        base();
+                        Range();
                     break;
+                    default:
+                        
                     case "the garage":
                         alert("You walk into the garage and see someone underneath an armored humvee. He notices your feet and says 'Hey you! hand me that wrench in the red toolbox on the table!");
                         alert("you grab the wench and hand it to the mechanic.");
@@ -80,8 +80,8 @@
                         base();
                     break;
                         case "the range":
-                        alert("You walk into the shooting range. You see people are firing weapons at immobile targets from 100 meters away. unfortunatly you cannot join them since you havent finished your training yet.");
-                        
+                            Range();
+                        break;
                         base();
                     break;
                     case "the bunks":
@@ -122,7 +122,7 @@
                         alert("tutorial: For this sequence a letter will appear on your screen along with a direction. Press the first letter in the direction.");
                         alert("sargent: READY!");
                         alert("sargent: FIRE THREE SHOTS!");
-                        prompt(" w left"):
+                        prompt(" w left");
                     case "q":
                         alert("BANG! the gun fires and you hit your target an inch away from the center.");
                         prompt("H up");
@@ -132,7 +132,7 @@
                     case "m":
                         alert("BANG! you fire the last shot and you hit just above your second shot!");
                         alert("sargent: SAFETY ON!");
-                        alert("private " +playerName "!")
+                        alert("private " +playerName);
                         alert("you: YES SIR?!");
                         alert("sargent: YOU WERE THE MOST ACCURATE! FIRE THREE MORE TO THE HEAD!");
                         alert("you: YES SIR!");
@@ -143,14 +143,14 @@
                         prompt("f down");
                     case "v":
                         alert("you put your safety on and look at your accuracy. you hit all three shots in a very small triangle.");
-                        alert("sargent: MIGHTY FINE SHOOTING! YOU ALL SHOULD BE SHOOTING LIKE PRIVATE " +playerName "!");
+                        alert("sargent: MIGHTY FINE SHOOTING! YOU ALL SHOULD BE SHOOTING LIKE PRIVATE " +playerName );
                         alert("sargent: ALRIGHT TIME FOR FREE FIRE TIME! I EXPECT TO SEE SOME GOOD RESULTS!")
                         alert("thirty minutes of gunfire pass.");
                         alert("sargent: OKAY! WERE GOING TO THE TRAINING GROUNDS! THIS WILL BE THE FINAL TEST FOR TODAY!");
                         alert("everyone jogs to the training grounds");
                         alert("sargent: OKAY! HERES THE DRILL. YOU WILL RUN THIS COURSE AS FAST AS YOU CAN. YOU WILL BE RUNNING IN WHAT YOU'D WEAR OUT IN THE FIELD! IT WILL BE HEAVY AND IT WILL BE PAINFUL!");
                         alert("sargent: THE FIRST MILE WILL BE A NON STOP RUN TO A MUD POOL. WHERE YOU WILL HAVE TO GO UNDER WATER AND NAVIGATE THROUGH A TIGHT PIPE. YOU WILL BE GUIDED BY YOUR SQUADMATES AND HEAD TO THE NEXT CHALLENGE!");
-                        alert("sargent: THE SECOND CHALLENGE WILL BE A TEST OF STRENGTH. YOU WILL RUN TO THE SKELETON TOWER AND FIND A WAY UP AND OVER. ALL WHILE CARRYING A SEVENTY POUND DUMMY.");
+                        alert("sargent: THE SECOND CHALLENGE WILL BE A TEST OF STRENGTH. YOU WILL RUN TO THE SKELETON TOWER AND FIND A WAY UP AND OVER. ALL WHILE CARRYING A ONE HUNDRED POUND DUMMY.");
                         alert("sargent: AND FINALLY FOR THE LAST CHALLENGE YOU WILL BE RUNNING TWO MORE MILES WHILE WE HAVE OUR INFANTRY WITH PAINTBALL GUNS ATTEMPTING TO HIT YOU!");
                         alert("sargent: EVERYONE LINE UP!");
                         alert("sargent: READY! SET! GO!");
@@ -161,8 +161,28 @@
                     case "29":
                         alert("You advance five feet!");
                         prompt (".*@..*..@..@@*. ");
-                    
+                    case "58":
+                        alert("You advanced five feet!");
+                        prompt ("..@.*.....@@@*@..*");
+                    case "75":
+                        alert("You made it throught the tunnel!");
+                        alert("You help your teammates through the tunnel and begin the run to the next area");
+                        alert("after running for what felt like an eternity you finaly arrive to the skeleton tower which was just a thirty foot tower that didnt have any walls, just beams and a rope.");
+                        alert("you run to the dummies and heave one over your shoulders. you and your squad form a human ladder.");
+                        alert("tutorial:  ")
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        function Range(){
+                            var range = alert ("You walk into the range and see other soldiers shooting weapons at targets. Unfortunately you cant shoot since you havent completed training.");
+                            
+                        }
                         
                         
                                             
