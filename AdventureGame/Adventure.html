@@ -29,7 +29,7 @@
                 var startGame = confirm("Are you ready to begin your training?");
                 
                     if(startGame){
-                       base(); 
+                       Base(); 
                     }
                     else{
                         ("goodbye.");
@@ -37,7 +37,7 @@
                 
             }
             
-            function base(){
+            function Base(){
                 var base = prompt ("There are four places you can visit. The bunks, the garage, the range, and the training grounds. Where would yo like to go? Type 'store' for store demonstration.").toLowerCase();
                 
                 switch(base){
@@ -52,7 +52,7 @@
                                         inventory.coins = inventory.coins - 300;
                                         alert ("you have "+inventory.coins+" coins remaining");
                 
-                                        base();
+                                        Base();
                                         
                                     }
 
@@ -60,8 +60,7 @@
                         
                     case "range":
                         Range();
-                    break;
-                    default:
+                    
                         
                     case "the garage":
                         alert("You walk into the garage and see someone underneath an armored humvee. He notices your feet and says 'Hey you! hand me that wrench in the red toolbox on the table!");
@@ -69,107 +68,130 @@
                         alert("'thanks!' he calls out");
                         alert("there is nothing else to do in the garage.");
                         
-                        base();
-                    break;
+                        Base();
+                   ;
                     case "garage":
                         alert("You walk into the garage and see someone underneath an armored humvee. He notices your feet and says 'Hey you! hand me that wrench in the red toolbox on the table!");
                         alert("you grab the wench and hand it to the mechanic.");
                         alert("'thanks!' he calls out");
                         alert("there is nothing else to do in the garage.");
                         
-                        base();
-                    break;
+                        Base();
+                    
                         case "the range":
                             Range();
-                        break;
-                        base();
-                    break;
+                        
+                  
                     case "the bunks":
-                        alert("You walk in the bunks. You glance around and see other recruits lieing on ther bunks relaxing and conversing.");
+                       var storystart = alert("You walk in the bunks. You glance around and see other recruits lieing on ther bunks relaxing and conversing.");
                         prompt("you have two places to go. Your bunk or the other recruits. where do you want to go?");
                         
-                    case "your bunk":
-                        alert("You walk to your bunk and lie down, waiting for whatever comes next.");
+                        if(storystart = "bunk" || "my bunk" || "your bunk") {
+                            var storystart = alert("You walk to your bunk and lie down, waiting for whatever comes next.");
                         alert(" 5 hours pass.");
                         alert("sargent:GET UP YOU SKINNY CHILDREN ITS TIME TO GET TO WORK!");
                         alert("you scramble out of your bunk and stand with your arms tightly at your sides.");
-                        alert("everyone lines up. ");
-                        alert("sargent: NOW LISTEN UP! YOU HAVE FIVE MINUTES TO GET DRESSED AND MAKE THOSE BUNKS! READY SET GO!");
+                        alert("everyone lines up.");
+                        var speedtest = alert("sargent: NOW LISTEN UP! YOU HAVE FIVE MINUTES TO GET DRESSED AND MAKE THOSE BUNKS! READY SET GO!");
                         prompt ("Quickly! what do you do first?");
-                    case "get dressed":
-                        alert("you grab your uniform and put it on as fast as you can.");
-                        alert("after putting on your uniform you run to your bunk and start making it.");
-                        alert("three minutes pass and you line back up. it seems your the first one done.");
-                        prompt("sargent: ARE YOU FINISHED WITH YOUR DUTYS?!");
-                    case "SIR YES SIR":
-                        alert("sargent:'LOOKS LIKE WE GOTTA MOMMAS BOY IN THE HOUSE!'");
-                        alert("everyone finishes putting on their uniforms and making their beds.");
-                        alert("sargent:ALRIGHT WERE GOING DOWN TO THE SHOOTING RANGE! I WANNA SEE YOU THERE YESTERDAY!");
-                        alert("everyone arrives at the range and lines up.");
-                        alert("sargent: OKAY. TODAY WERE GOING TO PRACTICE FIRING ASSAULT RIFLES!");
-                        alert("the sargent picks up an assault rifle. 'CAN ANYONE TELL ME WHAT KIND OF RIFLE THIS IS AND WHAT AMMO IT USES?!");
-                        prompt("Here's what you know about the assault rifle. \n - Matte black \n - smooth plastic rubber around the barrel \n - used in the vietnam war by American soldiers \n - uses 5.56mm ammo \n What gun is it?");
-                    case "M16":
-                        alert("you: 'Its an M16 assault rifle sir! it uses 5.56mm ammo!' ");
-                        prompt("sargent: 'THAT IS CORRECT! WHO SAID THAT?! WAS IT YOU MOMMAS BOY?!");
-                    case "SIR YES SIR":
-                        alert("sargent: 'GOOD JOB SOLDIER. IM NOT SURE WEATHER TO CALL YOU ENCYCLOPEDIA OR MOMMAS BOY BUT AT LEAST YOU HAVE THE BALLS TO ANSWER TO ME!");
-                        alert("you: THANK YOU SIR");
-                        alert("sargent: EVERYONE LINE UP AND AWAIT FURTHER INSTRUCTION!");
-                        alert("you line up and wait for the sargent to make a command.");
-                        alert("sargent: ON MY COMMAND YOU WILL FIRE. AM I CLEAR?! ");
-                        alert("everyone: SIR YES SIR!");
-                        alert("tutorial: For this sequence a letter will appear on your screen along with a direction. Press the first letter in the direction.");
-                        alert("sargent: READY!");
-                        alert("sargent: FIRE THREE SHOTS!");
-                        prompt(" w left");
-                    case "q":
-                        alert("BANG! the gun fires and you hit your target an inch away from the center.");
-                        prompt("H up");
-                    case "y":
-                        alert("BANG! the gun fires again and you hit the exact center of the target.")
-                        prompt ("n right.");
-                    case "m":
-                        alert("BANG! you fire the last shot and you hit just above your second shot!");
-                        alert("sargent: SAFETY ON!");
-                        alert("private " +playerName);
-                        alert("you: YES SIR?!");
-                        alert("sargent: YOU WERE THE MOST ACCURATE! FIRE THREE MORE TO THE HEAD!");
-                        alert("you: YES SIR!");
-                        prompt("i down");
-                    case "k":
-                        prompt("j left");
-                    case "h":
-                        prompt("f down");
-                    case "v":
-                        alert("you put your safety on and look at your accuracy. you hit all three shots in a very small triangle.");
-                        alert("sargent: MIGHTY FINE SHOOTING! YOU ALL SHOULD BE SHOOTING LIKE PRIVATE " +playerName );
-                        alert("sargent: ALRIGHT TIME FOR FREE FIRE TIME! I EXPECT TO SEE SOME GOOD RESULTS!")
-                        alert("thirty minutes of gunfire pass.");
-                        alert("sargent: OKAY! WERE GOING TO THE TRAINING GROUNDS! THIS WILL BE THE FINAL TEST FOR TODAY!");
-                        alert("everyone jogs to the training grounds");
-                        alert("sargent: OKAY! HERES THE DRILL. YOU WILL RUN THIS COURSE AS FAST AS YOU CAN. YOU WILL BE RUNNING IN WHAT YOU'D WEAR OUT IN THE FIELD! IT WILL BE HEAVY AND IT WILL BE PAINFUL!");
-                        alert("sargent: THE FIRST MILE WILL BE A NON STOP RUN TO A MUD POOL. WHERE YOU WILL HAVE TO GO UNDER WATER AND NAVIGATE THROUGH A TIGHT PIPE. YOU WILL BE GUIDED BY YOUR SQUADMATES AND HEAD TO THE NEXT CHALLENGE!");
-                        alert("sargent: THE SECOND CHALLENGE WILL BE A TEST OF STRENGTH. YOU WILL RUN TO THE SKELETON TOWER AND FIND A WAY UP AND OVER. ALL WHILE CARRYING A ONE HUNDRED POUND DUMMY.");
-                        alert("sargent: AND FINALLY FOR THE LAST CHALLENGE YOU WILL BE RUNNING TWO MORE MILES WHILE WE HAVE OUR INFANTRY WITH PAINTBALL GUNS ATTEMPTING TO HIT YOU!");
-                        alert("sargent: EVERYONE LINE UP!");
-                        alert("sargent: READY! SET! GO!");
-                        alert("you begin your run. you're doing good for the first mile. You get to the first challenge with three squadmates.");
-                        alert("tutorial: for this challenge, you will be prompted with a number of symbols. Each symbol means a different ammount. the period '.' stands for 1. the '*' counts for 5 and the '@' counts for 10. type in the total of the symbols combined and you will advance 5 feet down the 15 foot tunnel.");
-                        alert("you drop into the murky water and find the entrance to the tunnel.");
-                        prompt(" ... ** @ . * ");
-                    case "29":
-                        alert("You advance five feet!");
-                        prompt (".*@..*..@..@@*. ");
-                    case "58":
-                        alert("You advanced five feet!");
-                        prompt ("..@.*.....@@@*@..*");
-                    case "75":
-                        alert("You made it throught the tunnel!");
-                        alert("You help your teammates through the tunnel and begin the run to the next area");
-                        alert("after running for what felt like an eternity you finaly arrive to the skeleton tower which was just a thirty foot tower that didnt have any walls, just beams and a rope.");
-                        alert("you run to the dummies and heave one over your shoulders. you and your squad form a human ladder.");
-                        alert("tutorial:  ")
+                            if(speedtest = "get dressed"){
+                                alert("you grab your uniform and put it on as fast as you can.");
+                            alert("after putting on your uniform you run to your bunk and start making it.");
+                            alert("three minutes pass and you line back up. it seems your the first one done.");
+                            alert("sargent: ARE YOU FINISHED WITH YOUR DUTIES?!");
+                            var dutyconfirm = confirm("did you finish your duties?");
+                                if(dutyconfim){
+                                    alert("you: SIR YES SIR!");
+                                    alert("sargent:'LOOKS LIKE WE GOTTA MOMMAS BOY IN THE HOUSE!'");
+                                    alert("everyone finishes putting on their uniforms and making their beds.");
+                                    alert("sargent:ALRIGHT WERE GOING DOWN TO THE SHOOTING RANGE! I WANNA SEE YOU THERE YESTERDAY!");
+                                    alert("everyone arrives at the range and lines up.");
+                                    alert("sargent: OKAY. TODAY WERE GOING TO PRACTICE FIRING ASSAULT RIFLES!");
+                                    alert("the sargent picks up an assault rifle. 'CAN ANYONE TELL ME WHAT KIND OF RIFLE THIS IS AND WHAT AMMO IT USES?!");
+                                    var guncheck = prompt("Here's what you know about the assault rifle. \n - Matte black \n - smooth plastic rubber around the barrel \n - used in the vietnam war by American soldiers \n - uses 5.56mm ammo \n What gun is it?");
+                                    if(guncheck = "m16" || "M16"){
+                                        alert("you: 'Its an M16 assault rifle sir! it uses 5.56mm ammo!' ");
+                                        var mammasboy = prompt("sargent: 'THAT IS CORRECT! WHO SAID THAT?! WAS IT YOU MOMMAS BOY?!");
+                                        if(mammasboy = "yes" || "yes sir" || "SIR YES SIR" || "YES SIR") {
+                                            alert("sargent: 'GOOD JOB SOLDIER. IM NOT SURE WEATHER TO CALL YOU ENCYCLOPEDIA OR MOMMAS BOY BUT AT LEAST YOU HAVE THE GUTS TO ANSWER TO ME!");
+                                            alert("you: THANK YOU SIR");
+                                            alert("sargent: EVERYONE LINE UP AND AWAIT FURTHER INSTRUCTION!");
+                                            alert("you line up and wait for the sargent to make a command.");
+                                            alert("sargent: ON MY COMMAND YOU WILL FIRE. AM I CLEAR?! ");
+                                            alert("everyone: SIR YES SIR!");
+                                            alert("tutorial: For this sequence a letter will appear on your screen along with a direction. Press the first letter in the direction.");
+                                            alert("sargent: READY!");
+                                            alert("sargent: FIRE THREE SHOTS!");
+                                        
+                                            var firstcheck = prompt("w left");
+                                            if(firstcheck = "q"){
+                                                    alert("BANG! the gun fires and you hit your target an inch away from the center.");
+                                                var secondcheck = prompt("H up");
+                                                if (secondcheck = "y"){
+                                                        alert("BANG! the gun fires again and you hit the exact center of the target.")
+                                                    var finalcheck = prompt ("n right.");
+                                                    if(finalcheck = "m"){
+                                                        alert("BANG! you fire the last shot and you hit just above your second shot!");
+                                                    alert("sargent: SAFETY ON!");
+                                                    alert("private " +playerName);
+                                                    alert("you: YES SIR?!");
+                                                    alert("sargent: YOU WERE THE MOST ACCURATE! YOU ALL SHOULD BE SHOOTING LIKE "+playerName);
+                                                    alert("you: THANK YOU SIR!");
+                                                    alert("sargent: ALRIGHT TIME FOR FREE FIRE TIME! I EXPECT TO SEE SOME GOOD RESULTS!")
+                                                    alert("thirty minutes of gunfire pass.");
+                                                    alert("sargent: OKAY! WERE GOING TO THE TRAINING GROUNDS! THIS WILL BE THE FINAL TEST FOR TODAY!");
+                                                    alert("everyone jogs to the training grounds");
+                                                    alert("sargent: OKAY! HERES THE DRILL. YOU WILL RUN THIS COURSE AS FAST AS YOU CAN. YOU WILL BE RUNNING IN WHAT YOU'D WEAR OUT IN THE FIELD! IT WILL BE HEAVY AND IT WILL BE PAINFUL!");
+                                                    alert("sargent: THE FIRST MILE WILL BE A NON STOP RUN TO A MUD POOL. WHERE YOU WILL HAVE TO GO UNDER WATER AND NAVIGATE THROUGH A TIGHT PIPE. YOU WILL BE GUIDED BY YOUR SQUADMATES AND HEAD TO THE NEXT CHALLENGE!");
+                                                    alert("sargent: THE SECOND CHALLENGE WILL BE A TEST OF STRENGTH. YOU WILL RUN TO THE SKELETON TOWER AND FIND A WAY UP AND OVER. ALL WHILE CARRYING A ONE HUNDRED POUND DUMMY.");
+                                                    alert("sargent: AND FINALLY FOR THE LAST CHALLENGE YOU WILL BE RUNNING TWO MORE MILES WHILE WE HAVE OUR INFANTRY WITH PAINTBALL GUNS ATTEMPTING TO HIT YOU!");
+                                                    alert("sargent: EVERYONE LINE UP!");
+                                                    alert("sargent: READY! SET! GO!");
+                                                    alert("you begin your run. you're doing good for the first mile. You get to the first challenge with three squadmates.");
+                                                    alert("tutorial: for this challenge, you will be prompted with a number of symbols. Each symbol means a different ammount. the period '.' stands for 1. the '*' counts for 5 and the '@' counts for 10. type in the total of the symbols combined and you will advance 5 feet down the 15 foot tunnel.");
+                                                    alert("you drop into the murky water and find the entrance to the tunnel.");
+                                                    var firstpuzzle = prompt(" ... ** @ . * ");
+                                                        if(firstpuzzle = "29"){
+                                                           alert("You advance five feet!");
+                                                        var secondpuzzle = prompt (".*@..*..@..@@*. ");
+                                                            if(secondpuzzle = )
+
+                                                        alert("You advanced five feet!");
+                                                        prompt ("..@.*.....@@@*@..*");
+
+                                                        alert("You made it throught the tunnel!");
+                                                        alert("You help your teammates through the tunnel and begin the run to the next area");
+                                                        alert("after running for what felt like an eternity you finaly arrive to the skeleton tower which was just a thirty foot tower that didnt have any walls, just beams and a rope.");
+                                                        alert("you run to the dummies and heave one over your shoulders. you and your squad form a human ladder.");
+                                                        alert("tutorial: For the final minigame you will be prompted with letters, numbers, and symbols. type them back as fast as you can to climb up and over the tower. ");
+                                                        }
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                } 
+                            }
+
+                                                    
+
+                                                    
+
+                                                
+                                            
+                                        
+                                        
+                                    
+
+                                    
+                                
+                            
+                        
+                        
+                    
+                        
                         
                         
                         
@@ -181,6 +203,8 @@
                         
                         function Range(){
                             var range = alert ("You walk into the range and see other soldiers shooting weapons at targets. Unfortunately you cant shoot since you havent completed training.");
+                            
+                            Base();
                             
                         }
                         
