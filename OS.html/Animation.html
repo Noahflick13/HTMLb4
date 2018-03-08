@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: grey;
+    }
+    #animate {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: red;
+    }
+</style>
+<body>
+    <p>
+<button  onclick="myMove()">Press to get destroyed</button>
+    </p>
+<h1>My First JavaScript Animation</h1>
+    
+    <div id ="container">
+    <div id ="animate">F'Ness</div>
+    </div>
+
+<script>
+function myMove(){
+    var elem = document.getElementById("animate");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+    function frame(){
+        if(pos == 150) {
+            clearInterval(id);
+        } else {
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos + 'px';
+        }
+    }
+}
+    </script>
+</body>
+</html>
